@@ -11,11 +11,26 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var lblWelcome: UILabel!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("viewDidAppear")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("viewWillAppear")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        lblWelcome.text="LOGIN"
+        print(lblWelcome.text!)
+        
         // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBAction func btnClickMeTap(_ sender: UIButton) {
+        lblWelcome.text="Welcome to Your Account"
+        
+    }
+    
 }
 
